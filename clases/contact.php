@@ -2,13 +2,17 @@
     require_once("conexion.php");
     class contactos{
         private string $nombreContacto;
-        private string $direccionContacto;
+        private string $emailContacto;
         private string $telefono;
-        function __construct($nombreContacto, $direccionContacto, $telefono){
+        function __construct($nombreContacto, $emailContacto, $telefono){
             $this->nombreContacto = $nombreContacto;
-            $this->direccionContacto = $direccionContacto;
+            $this->emailContacto = $emailContacto;
             $this->telefono = $telefono;
         }
+
+        /*
+            SCOPE_IDENTITY() devuelve el ultimo identity generado en el mismo ambito.   
+        */
 
         public function crearContacto($userId){
             $conect = new ConexionSQLSERVER();
@@ -17,11 +21,9 @@
             '$userId')
             DECLARE @ultimoID INT 
             SELECT @UltimoID = SCOPE_IDENTITY()
-            INSERT INTO TELEFONO(ID_CONTACTO,TELEFONO_CONTACTO,TIPO) VALUES (@ultimoID,'$this->telefono','Casa')   ";
-            $idContacto = $conect->ejecutarQuery($query);
-            print_r($idContacto);
+            INSERT INTO TELEFONO(ID_CONTACTO,TELEFONO_CONTACTO,TIPO) VALUES (@ultimoID,'$this->telefono','Casa')   
+            INSERT INTO EMAIL(ID_CONTACTO,EMAIL_CONTACTO) VALUES (@ultimoID,'$this->emailContacto') ";
+            $contacto = $conect->ejecutarQuery($query);
+            return $contacto;
         }
     }
-
-    $contacto = new Contactos('Samuel','Carretera','809-444-4444');
-    $contacto->crearContacto(1);
