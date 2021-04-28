@@ -1,0 +1,29 @@
+:root{
+    --color-background: #535c68;
+    --color-label: #f5f6fa;
+    --color-text-button: #353b48;
+}
+
+body{
+    background-color: var(--color-background);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label{
+    color: var(--color-label);
+}
+
+.login{
+    min-width:250px;
+
+    text-align:center;
+}
+
+
+/* .button{
+    color: var(--color-text-button);
+    background-color:red;
+} */
