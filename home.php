@@ -20,9 +20,6 @@
         $idUsuario =  $_SESSION['id']['ID_USUARIO'];
         $objContactos = new Contactos();
         $contactos = $objContactos->obtenerContactos($idUsuario);
-        // echo '<pre>';
-        // print_r($contactos);
-        // echo '</pre>';
             foreach ($contactos as $key => $contacto) {
                 echo "<div class='card '>";
                 $contador = 0;
@@ -59,13 +56,3 @@
     </form>
 </body>
 </html>
-
-<?php 
-    // while($contador < count($contacto['TELEFONO_CONTACTO'])){
-    //     echo "<td>".$contacto['TELEFONO_CONTACTO'][$contador]['TELEFONO_CONTACTO']."</td>";
-    //     echo "<td>".$contacto['TELEFONO_CONTACTO'][$contador]['TIPO']."</td>";
-    //     $contador++;
-    // }
-    // echo "<td>".$contacto['EMAIL_CONTACTO'][0]['EMAIL_CONTACTO']."</td>";
-    // echo "</tr>";
-?>
