@@ -51,8 +51,13 @@
             }
     ?>
     </main>
-    <form action="logout.php" method="POST" class="logout">
-        <input type="submit" value="Cerrar Sesion" name="logOut" class="button is-dark">
-    </form>
+   <footer class="container-buttons">
+        <form action="logout.php" method="POST" class="logout">
+                <input type="submit" value="Cerrar Sesion" name="logOut" class="button is-dark">
+        </form>
+        <div class="add">
+                    <a href="contact.php" class="button is-dark">Crear Contacto</a>
+        </div>
+   </footer>
 </body>
 </html>
