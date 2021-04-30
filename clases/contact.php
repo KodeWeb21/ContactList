@@ -6,17 +6,20 @@
             SCOPE_IDENTITY() devuelve el ultimo identity generado en el mismo ambito.   
         */
 
-        public function crearContacto($userId, $nombreContacto, $emailContacto, $telefono){
-            $conect = new ConexionSQLSERVER();
-            $query = 
-            "INSERT INTO CONTACTO(NOMBRE_CONTACTO,ID_USUARIO) VALUES ('$nombreContacto',
-            '$userId')
-            DECLARE @ultimoID INT 
-            SELECT @UltimoID = SCOPE_IDENTITY()
-            INSERT INTO TELEFONO(ID_CONTACTO,TELEFONO_CONTACTO,TIPO) VALUES (@ultimoID,'$telefono','Casa')   
-            INSERT INTO EMAIL(ID_CONTACTO,EMAIL_CONTACTO) VALUES (@ultimoID,'$emailContacto') ";
-            $contacto = $conect->ejecutarQuery($query);
-            return $contacto;
+        public function crearContacto($userId, $nombreContacto, $emailContacto, $telefono, $tipo){
+            try{
+                $conect = new ConexionSQLSERVER();
+                $query = 
+                "INSERT INTO CONTACTO(NOMBRE_CONTACTO,ID_USUARIO) VALUES ('$nombreContacto',
+                '$userId')
+                DECLARE @ultimoID INT 
+                SELECT @UltimoID = SCOPE_IDENTITY()
+                INSERT INTO TELEFONO(ID_CONTACTO,TELEFONO_CONTACTO,TIPO) VALUES (@ultimoID,'$telefono','$tipo')   
+                INSERT INTO EMAIL(ID_CONTACTO,EMAIL_CONTACTO) VALUES (@ultimoID,'$emailContacto') ";
+                $contacto = $conect->ejecutarQuery($query);
+            }catch(Exception $error){
+                echo 'Ocurrio un error'.$error->getMessage();
+            }
         }
 
         public function obtenerIdContactos($userId){
