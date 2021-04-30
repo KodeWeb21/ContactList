@@ -22,7 +22,7 @@
             }
         }
 
-        public function obtenerIdContactos($userId){
+        private function obtenerIdContactos($userId){
             $conect = new ConexionSQLSERVER();
             $query = "SELECT ID_CONTACTO from CONTACTO WHERE ID_USUARIO = $userId ";
             $idContactos = $conect->ejecutarQuery($query);
@@ -74,5 +74,41 @@
             $conect = new ConexionSQLSERVER();
             $query = "DELETE FROM CONTACTO, EMAIL, TELEFONO WHERE ID_CONTACTO = $idContacto";
             $conect->ejecutarQuery($query);
+        }
+
+        public function obtenerUnContacto($idContacto){
+            
+            $contactoNombre = $this->obtenerNombreContacto($idContacto);
+            if($contactoNombre){
+                $contactoEmail = $this->obtenerEmailContactos($idContacto);
+                $contactoTelefono = $this->ObtenerTelefonoContactos($idContacto);
+                $infoContacto = array(
+                    "ID_CONTACTO"=>$idContacto,
+                    "NOMBRE_CONTACTO"=>$contactoNombre,
+                    "EMAIL_CONTACTO"=>$contactoEmail,
+                    "TELEFONO_CONTACTO"=>$contactoTelefono
+                );
+                return $infoContacto;
+            }
+
+            throw new Exception('No se pudo obtener el contacto');
+        }
+
+        public function editarNombreContacto($nuevoNombre,$idContacto){
+            $conect = new ConexionSQLSERVER();
+            $query = "UPDATE CONTACTO SET NOMBRE_CONTACTO = $nuevoNombre WHERE ID_CONTACTO = $idContacto";
+            $conect->query($query);
+        }
+
+        public function editarEmailContacto($nuevoEmail, $idContacto){
+            $conect = new ConexionSQLSERVER();
+            $query = "UPDATE EMAIL SET EMAIL_CONTACTO = $nuevoEmail WHERE ID_CONTACTO = $idContacto";
+            $conect->query($query);
+        }
+
+        public function editarTelefonoContacto($nuevoTelefono, $nuevoTipo,  $idContacto){
+            $conect = new ConexionSQLSERVER();
+            $query = "UPDATE TELEFONO SET TELEFONO_CONTACTO = $nuevoTelefono, TIPO = $nuevoTipo WHERE ID_CONTACTO = $idContacto";
+            $conect->query($query);
         }
     }
