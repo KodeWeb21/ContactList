@@ -22,6 +22,7 @@
         public function ejecutarQuery($query){
             $conect = $this->conectar();
             $results = $conect->query($query);
+            if(!$results) throw new Exception('No se pudo ejecutar la consulta');
             return $results->fetchAll(PDO::FETCH_ASSOC);
         }
     
