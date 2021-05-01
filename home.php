@@ -15,7 +15,8 @@
 </head>
 <body>
     <main class="main">
-        <?php 
+        <?php
+        include_once("show-edit-modal.php"); 
         require_once("clases/contact.php");
         $idUsuario =  $_SESSION['id']['ID_USUARIO'];
         $objContactos = new Contactos();
@@ -49,6 +50,23 @@
                echo "</div>";
                echo "</div>";
             }
+
+        if(isset($_GET['action']) && 
+           !empty($_GET['action']) && 
+           isset($_GET['id']) && 
+           !empty($_GET['id'])){
+               $action = $_GET['action'];
+               switch($action)
+               {
+                   case 'edit' :{
+                       $contacto = array_filter($contactos,function($value){
+                           return $value['ID_CONTACTO'][0] == $_GET['id'];
+                       });
+                       showEditContactModal($contacto);
+                   } 
+               }
+           }
+           
     ?>
     </main>
    <footer class="container-buttons">
