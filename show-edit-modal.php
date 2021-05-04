@@ -29,6 +29,7 @@
                         </select>
                     </div>
                 </div>
+                <input type='hidden' name='id' value=".$contacto['ID_CONTACTO'][0].">
                 <input type='submit' value='Editar Contacto' class='button is-light  is-link'>
             </form>
             </div>"
