@@ -96,19 +96,19 @@
 
         public function editarNombreContacto($nuevoNombre,$idContacto){
             $conect = new ConexionSQLSERVER();
-            $query = "UPDATE CONTACTO SET NOMBRE_CONTACTO = $nuevoNombre WHERE ID_CONTACTO = $idContacto";
-            $conect->query($query);
+            $query = "UPDATE CONTACTO SET NOMBRE_CONTACTO = '$nuevoNombre' WHERE ID_CONTACTO = $idContacto";
+            $conect->ejecutarQuery($query);
         }
 
         public function editarEmailContacto($nuevoEmail, $idContacto){
             $conect = new ConexionSQLSERVER();
-            $query = "UPDATE EMAIL SET EMAIL_CONTACTO = $nuevoEmail WHERE ID_CONTACTO = $idContacto";
-            $conect->query($query);
+            $query = "UPDATE EMAIL SET EMAIL_CONTACTO = '$nuevoEmail' WHERE ID_CONTACTO = $idContacto";
+            $conect->ejecutarQuery($query);
         }
 
         public function editarTelefonoContacto($nuevoTelefono, $nuevoTipo,  $idContacto){
             $conect = new ConexionSQLSERVER();
-            $query = "UPDATE TELEFONO SET TELEFONO_CONTACTO = $nuevoTelefono, TIPO = $nuevoTipo WHERE ID_CONTACTO = $idContacto";
-            $conect->query($query);
+            $query = "UPDATE TELEFONO SET TELEFONO_CONTACTO = '$nuevoTelefono', TIPO = '$nuevoTipo' WHERE ID_CONTACTO = $idContacto";
+            $conect->ejecutarQuery($query);
         }
     }
