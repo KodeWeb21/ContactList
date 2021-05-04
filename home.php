@@ -21,34 +21,44 @@
         $idUsuario =  $_SESSION['id']['ID_USUARIO'];
         $objContactos = new Contactos();
         $contactos = $objContactos->obtenerContactos($idUsuario);
-            foreach ($contactos as $key => $contacto) {
-                echo "<div class='card '>";
-                $contador = 0;
-                echo "<div class='card-header'>";
-                echo "<div class='card-header-title'> ".$contacto['NOMBRE_CONTACTO'][0]['NOMBRE_CONTACTO']."</div>"; 
-               echo "</div>";
-               echo "<div class='card-content'>";
-               echo "<div class='content'> ";
-                do{
+            if(count($contactos) === 0){
+                echo '<div class="content is-medium message">
+                <p class="message__text">
+                Aun no 
+                tienes 
+                ningun 
+                contacto</p>
+                </div>';
+            }else{
+                foreach ($contactos as $key => $contacto) {
+                    echo "<div class='card '>";
+                    $contador = 0;
+                    echo "<div class='card-header'>";
+                    echo "<div class='card-header-title'> ".$contacto['NOMBRE_CONTACTO'][0]['NOMBRE_CONTACTO']."</div>"; 
+                   echo "</div>";
+                   echo "<div class='card-content'>";
+                   echo "<div class='content'> ";
+                    do{
+                        echo "<div class='content-text'>";
+                        echo "<span class='card-text' >".$contacto['TELEFONO_CONTACTO'][$contador]['TIPO']." :</span>";
+                        echo "<span class='card-text'>".$contacto['TELEFONO_CONTACTO'][$contador]['TELEFONO_CONTACTO']."</span>";
+                        echo "</div>";
+                        $contador++;
+                    }while($contador < count($contacto['TELEFONO_CONTACTO']));
                     echo "<div class='content-text'>";
-                    echo "<span class='card-text' >".$contacto['TELEFONO_CONTACTO'][$contador]['TIPO']." :</span>";
-                    echo "<span class='card-text'>".$contacto['TELEFONO_CONTACTO'][$contador]['TELEFONO_CONTACTO']."</span>";
-                    echo "</div>";
-                    $contador++;
-                }while($contador < count($contacto['TELEFONO_CONTACTO']));
-                echo "<div class='content-text'>";
-               echo "<span class='card-text'>Email :</span>";
-               echo "<span class='card-text'>".$contacto['EMAIL_CONTACTO'][0]['EMAIL_CONTACTO']."</span>";
-               echo "</div>";
-               echo "</div>";
-               echo "</div>";
-               echo "<footer class='card-footer'>";
-               echo "<a class='card-footer-item' href='?action=edit&id=".$contacto['ID_CONTACTO'][0]."'>Editar</a>";
-               echo "<a class='card-footer-item' href='?action=delete&id=".$contacto['ID_CONTACTO'][0]."'>Borrar</a>";
-               echo "</footer>";
-               echo "</div>";
-               echo "</div>";
-               echo "</div>";
+                   echo "<span class='card-text'>Email :</span>";
+                   echo "<span class='card-text'>".$contacto['EMAIL_CONTACTO'][0]['EMAIL_CONTACTO']."</span>";
+                   echo "</div>";
+                   echo "</div>";
+                   echo "</div>";
+                   echo "<footer class='card-footer'>";
+                   echo "<a class='card-footer-item' href='?action=edit&id=".$contacto['ID_CONTACTO'][0]."'>Editar</a>";
+                   echo "<a class='card-footer-item' href='?action=delete&id=".$contacto['ID_CONTACTO'][0]."'>Borrar</a>";
+                   echo "</footer>";
+                   echo "</div>";
+                   echo "</div>";
+                   echo "</div>";
+                }
             }
 
         if(isset($_GET['action']) && 
@@ -63,7 +73,12 @@
                            return $value['ID_CONTACTO'][0] == $_GET['id'];
                        });
                        showEditContactModal($contacto);
-                   } 
+                   }
+                   break;
+                   case 'delete':{
+                    $contactoId = $_GET['id'];
+                    $objContactos->deleteContacto($contactoId, $idUsuario);
+                   }
                }
            }
            
