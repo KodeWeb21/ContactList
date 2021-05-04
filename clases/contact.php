@@ -111,4 +111,12 @@
             $query = "UPDATE TELEFONO SET TELEFONO_CONTACTO = '$nuevoTelefono', TIPO = '$nuevoTipo' WHERE ID_CONTACTO = $idContacto";
             $conect->ejecutarQuery($query);
         }
+
+        public function deleteContacto($idContacto,$idUsuario){
+            $conect = new ConexionSQLSERVER();
+            $query = "DELETE FROM CONTACTO WHERE ID_CONTACTO = $idContacto AND ID_USUARIO = $idUsuario
+                      DELETE FROM EMAIL WHERE ID_CONTACTO = $idContacto
+                      DELETE FROM TELEFONO WHERE ID_CONTACTO = $idContacto";
+            $conect->ejecutarQuery($query);
+        }
     }
