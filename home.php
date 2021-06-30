@@ -52,8 +52,8 @@
                    echo "</div>";
                    echo "</div>";
                    echo "<footer class='card-footer'>";
-                   echo "<a class='card-footer-item' href='?action=edit&id=".$contacto['ID_CONTACTO'][0]."'>Editar</a>";
-                   echo "<a class='card-footer-item' href='?action=delete&id=".$contacto['ID_CONTACTO'][0]."'>Borrar</a>";
+                   echo "<a class='card-footer-item' href='?action=edit&id=".$contacto['ID_CONTACTO']."'>Editar</a>";
+                   echo "<a class='card-footer-item' href='?action=delete&id=".$contacto['ID_CONTACTO']."'>Borrar</a>";
                    echo "</footer>";
                    echo "</div>";
                    echo "</div>";
