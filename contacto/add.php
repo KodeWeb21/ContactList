@@ -1,7 +1,7 @@
 <?php 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-      require_once("clases/contact.php");  
-      require_once("clases/sesion.php");
+      require_once("../clases/contact.php");  
+      require_once("../clases/sesion.php");
       Sesion::VerificarSesion();
       $idUsuario = $_SESSION['id']['ID_USUARIO'];
         if(
@@ -17,6 +17,6 @@
                 
                 $objContacto = new Contactos();
                 $objContacto->crearContacto($idUsuario,$nombreContacto,$emailContacto,$telefono, $tipo);
-                header("Location:home.php");
+                header("Location:../my/home.php");
             }
     }

@@ -1,7 +1,7 @@
 <?php 
     session_start();
     if(isset($_SESSION['id'])){
-            header("Location:home.php");
+            header("Location:my/home.php");
         }
 ?>
 
@@ -17,7 +17,7 @@
     <title>Agenda Telefonica</title>
 </head>
 <body>
-    <form action="login.php" method="POST" class="login">
+    <form action="login/login.php" method="POST" class="login">
         <div class="field">
             <label for="email" class="label">Email</label>
             <div class="control">
