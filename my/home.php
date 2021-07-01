@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda Telefonica</title>
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/head.css">
 </head>
 <body>
     <header>
@@ -39,15 +40,11 @@
                 </span>
                 </div>
                 <div class='content-text'>
-                <p class='nombre'>{$contacto['NOMBRE_CONTACTO'][0]['NOMBRE_CONTACTO']}</p>
-                <p class='email'>{$contacto['EMAIL_CONTACTO'][0]['EMAIL_CONTACTO']}</p>
-                <div>
-                    <span class='tipo'>{$contacto['TELEFONO_CONTACTO'][0]['TELEFONO_CONTACTO']}</span>
-                    <span class='telefono'>{$contacto['TELEFONO_CONTACTO'][0]['TIPO']}</span>
-                </div>
-                <div class='buttons'>
-                <a href='../contacto/edit.php?
-                </div>
+                    <h3 class='nombre'>{$contacto['NOMBRE_CONTACTO'][0]['NOMBRE_CONTACTO']}</h3>
+                    <div class='buttons'>
+                    <a href='../contacto/contactedit.php?id={$contacto['ID_CONTACTO']}' class='button'>Editar</a>
+                    <a href='../contacto/delete.php'?id={$contacto['ID_CONTACTO']} class='button'>Eliminar</a>
+                    </div>
                 </div>
             </article>
             "

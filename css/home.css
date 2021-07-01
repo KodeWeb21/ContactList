@@ -2,16 +2,10 @@ body{
     min-height: 100vh;
 }
 
-header{
-    display:flex;
-    justify-content: space-around;
-}
-
 .main{
     width:60%;
     margin-left:auto;
     margin-right:auto;
-    border:1px solid black;
     display:flex;
     justify-content: center;
     flex-direction: column;
@@ -38,4 +32,27 @@ header{
 .card{
     display:flex;
     margin:1.8rem;
+}
+
+.nombre{
+    margin:0.4rem;
+    font-weight:lighter;
+}
+
+.content-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button{
+    display: inline-block;
+    min-width: 50px;
+    text-decoration: none;
+    color: white;
+    text-align:center;
+    padding:.1rem;
+    border-radius:5px;
+    background-color: yellowgreen;
+    margin: .5rem;
 }
