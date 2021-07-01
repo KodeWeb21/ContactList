@@ -1,0 +1,38 @@
+.abreviatura{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background-color:yellowgreen;
+    color:white;
+    font-weight:bold;
+    text-align:center;
+    line-height:100px;
+    font-size:2rem;
+}
+
+.content-info{
+    display:flex;
+    flex-direction: column;
+    width:20%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+input{
+    margin-bottom:15px;
+}
+
+select,input{
+    padding:.3rem;
+}
+
+.buttons{
+   width:20%;
+   margin:20px auto;
+   display:flex;
+   justify-content: space-around;
+}
+
+.buttons > input {
+    cursor:pointer;
+}
