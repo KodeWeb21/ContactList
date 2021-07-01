@@ -1,0 +1,16 @@
+header{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.search {
+    width: 60%;
+    place-items: center;
+    display: grid;
+}
+
+input[type="search"] {
+    width: 80%;
+    padding:.5rem;
+}
