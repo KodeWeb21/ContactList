@@ -46,12 +46,12 @@
             <form action='edit.php' method='POST'>
                 <div class='content-info'>
                         <label for='nombre'>Nombre</label>
-                        <input type='text' name='nombre' id='' placeholder='{$contacto['NOMBRE_CONTACTO'][0]['NOMBRE_CONTACTO']}'>
+                        <input type='text' name='nombre' id='' value='{$contacto['NOMBRE_CONTACTO'][0]['NOMBRE_CONTACTO']}'>
                         <label for='email'>Email</label>
-                        <input type='text' name='email' placeholder='{$contacto['EMAIL_CONTACTO'][0]['EMAIL_CONTACTO']}'>
+                        <input type='text' name='email' value='{$contacto['EMAIL_CONTACTO'][0]['EMAIL_CONTACTO']}'>
                         <label for='telefono'>Telefono</label>
-                        <input type='tel' name='telefono' placeholder='{$contacto['TELEFONO_CONTACTO'][0]['TELEFONO_CONTACTO']}' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'>
-                        <select>
+                        <input type='tel' name='telefono' value='{$contacto['TELEFONO_CONTACTO'][0]['TELEFONO_CONTACTO']}' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'>
+                        <select name='type'>
                             <option value='{$contacto['TELEFONO_CONTACTO'][0]['TIPO']}' checked>
                                 {$contacto['TELEFONO_CONTACTO'][0]['TIPO']}
                             </option>
@@ -60,6 +60,7 @@
                             </option>
 
                         </select>
+                        <input type='hidden' name='id' value='{$idContacto}'>
                 </div>
                 <div class='buttons'>
                     <input type='submit' value='Confirmar cambios' name='editar'>
