@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../css/login.css">
     <title>Agregar Contacto</title>
 </head>
 <body>
@@ -29,7 +29,7 @@
         <div class="field">
             <label for="telefono" class="label">Telefono</label>
             <div class="control">
-                <input type="tel" class="input" id="telefono" name="telefono">
+                <input type="tel" class="input" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
             </div>
             <div class="select" style="margin:15px;">
                 <select name="type">
