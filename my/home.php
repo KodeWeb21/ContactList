@@ -52,6 +52,11 @@
        }
     ?>
        </section>
+       <a href="../contacto/contact.php" class="addlink">
+       <div class="content-add">
+            <button type="submit" class="addbtn">+</button>
+      </div>
+      </a>
     </main>
 </body>
 </html>
