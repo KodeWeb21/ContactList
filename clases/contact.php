@@ -70,12 +70,6 @@
             return $contactos;
         }
 
-        public function borrarContacto($idContacto, $userId){
-            $conect = new ConexionSQLSERVER();
-            $query = "DELETE FROM CONTACTO, EMAIL, TELEFONO WHERE ID_CONTACTO = $idContacto";
-            $conect->ejecutarQuery($query);
-        }
-
         public function obtenerUnContacto($idContacto){
             
             $contactoNombre = $this->obtenerNombreContacto($idContacto);
