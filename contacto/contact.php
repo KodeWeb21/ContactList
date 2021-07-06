@@ -13,7 +13,7 @@
     <title>Agregar Contacto</title>
 </head>
 <body>
-<form action="add.php" method="POST" class="login">
+<form action="../acciones/add.php" method="POST" class="login">
         <div class="field">
             <label for="nombre" class="label">Nombre</label>
             <div class="control">
@@ -40,8 +40,8 @@
             </div>
         </div>
         <div class="buttons">
-            <input type="submit" name="crear" value="Crear Contacto" class="button is-light  is-link">
-            <input type="submit" value="Cancelar" class="button is-light is-link">
+            <input type="submit" name="crear" value="Crear Contacto" class="button is-light">
+            <input type="submit" value="Cancelar" class="button is-light">
         </div>
     </form>
 </body>
