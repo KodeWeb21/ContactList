@@ -1,5 +1,5 @@
 <?php 
-    require_once("conexion.php");
+    require_once("../clases/conexion/conexion.php");
 
     class Login{
         static function logearUsuario($email, $clave){

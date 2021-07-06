@@ -32,7 +32,7 @@
     <main class="main">
         <article class='contact'>
             <?php 
-                require_once("../clases/contact.php");
+                require_once("../clases/contacto/contact.php");
                 $idContacto  = $_SESSION['id-contacto'];
                 $objContacto = new Contactos();
                 $contacto = $objContacto->obtenerUnContacto($idContacto);

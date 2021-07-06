@@ -1,6 +1,6 @@
 <?php 
-    require_once("../clases/contact.php");
-    require_once("../clases/redirect.php");
+    require_once("../clases/contacto/contact.php");
+    require_once("../clases/redirect/redirect.php");
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         if(isset($_POST['nombre']) &&
            !empty($_POST['nombre']) &&

@@ -1,6 +1,6 @@
 <?php 
-    require_once("../clases/contact.php");
-    require_once("../clases/redirect.php");
+    require_once("../clases/contacto/contact.php");
+    require_once("../clases/redirect/redirect.php");
     if(isset($_GET['id']) && !empty($_GET['id'])){
         $objContacto = new Contactos();
         $idContacto = $_GET['id'];

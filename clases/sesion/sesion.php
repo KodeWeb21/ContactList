@@ -1,5 +1,5 @@
 <?php 
-    require_once("redirect.php");
+    require_once("../clases/redirect/redirect.php");
 
     class Sesion{
         static function crearSesion($id){

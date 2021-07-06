@@ -1,5 +1,5 @@
 <?php 
-    require_once("../clases/sesion.php");
+    require_once("../clases/sesion/sesion.php");
     Sesion::VerificarSesion();
 ?>
 
@@ -28,7 +28,7 @@
     <main class="main">
        <section class="contactos">
        <?php
-        require_once("../clases/contact.php"); 
+        require_once("../clases/contacto/contact.php"); 
         $idUsuario = $_SESSION['id'];
         $objContactos = new Contactos();
         $contactos = $objContactos->obtenerContactos($idUsuario['ID_USUARIO']);
