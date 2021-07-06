@@ -39,7 +39,10 @@
                 </select>
             </div>
         </div>
-        <input type="submit" value="Crear Contacto" class="button is-light  is-link">
+        <div class="buttons">
+            <input type="submit" name="crear" value="Crear Contacto" class="button is-light  is-link">
+            <input type="submit" value="Cancelar" class="button is-light is-link">
+        </div>
     </form>
 </body>
 </html>
