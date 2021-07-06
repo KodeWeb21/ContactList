@@ -13,7 +13,7 @@
     <title>Agregar Contacto</title>
 </head>
 <body>
-<form action="../acciones/add.php" method="POST" class="login">
+<form action="add.php" method="POST" class="login">
         <div class="field">
             <label for="nombre" class="label">Nombre</label>
             <div class="control">
