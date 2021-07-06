@@ -12,15 +12,19 @@ header{
     min-width:200px;
 }
 
+.user{
+    margin-right:20px;
+}
+
 input[type="search"] {
     width: 80%;
     padding:.5rem;
 }
 
 @media screen and (max-width:1000px){
-    header{
+    /* header{
         justify-content: space-between;
-    }
+    } */
     .search{
         width:60%;
         margin-left:0;
