@@ -1,12 +1,22 @@
+:root{
+    --color-background: #535c68;
+    --color-text: #f5f6fa;
+}
+
 body{
     min-height: 100vh;
     min-width:340px;
+    color:var(--color-text);
+    background-color:var(--color-background);
 }
 
 .main{
     width:60%;
+    height:100%;
     margin-left:auto;
     margin-right:auto;
+    position:relative;
+    z-index:100;
 }
 
 .contactos{
@@ -30,6 +40,9 @@ body{
 .card{
     display:flex;
     margin:1.8rem;
+    background-color:inherit;
+    box-shadow:0 0 0 0;
+    color:white;
 }
 
 .nombre{
@@ -43,6 +56,10 @@ body{
     justify-content: center;
 }
 
+.buttons{
+    flex-wrap:nowrap;
+}
+
 .button{
     display: inline-block;
     min-width: 50px;
@@ -53,11 +70,12 @@ body{
     border-radius:5px;
     background-color: yellowgreen;
     margin: .5rem;
+    height:auto;
 }
 
 .content-add{
     position: fixed;
-    width:60%;
+    width:100%;
     bottom:50px;
     text-align:right;
 }
@@ -72,6 +90,7 @@ body{
     background-color: yellowgreen;
     transition:color .3s ease;
     cursor:pointer;
+    margin:20px;
 }
 
 .addbtn a {
