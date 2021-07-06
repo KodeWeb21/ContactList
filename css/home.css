@@ -1,14 +1,12 @@
 body{
     min-height: 100vh;
+    min-width:340px;
 }
 
 .main{
     width:60%;
     margin-left:auto;
     margin-right:auto;
-    display:flex;
-    justify-content: center;
-    flex-direction: column;
 }
 
 .contactos{
@@ -79,4 +77,15 @@ body{
 .addbtn a {
     text-decoration:none;
     color:black;
+}
+
+@media screen and (max-width:1000px){
+    .contactos,.main{
+        margin-left:0;
+        margin-right:0;
+    }
+
+    .buttons{
+        display:flex;
+    }
 }
