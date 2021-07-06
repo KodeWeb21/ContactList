@@ -2,6 +2,7 @@
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
       require_once("../clases/contacto/contact.php");  
       require_once("../clases/sesion/sesion.php");
+      require_once("../clases/redirect/redirect.php");
       Sesion::VerificarSesion();
       $idUsuario = $_SESSION['id']['ID_USUARIO'];
         if(
@@ -22,8 +23,8 @@
                 
                 $objContacto = new Contactos();
                 $objContacto->crearContacto($idUsuario,$nombreContacto,$emailContacto,$telefono, $tipo);
-                header("Location:../my/home.php");
+                Redirect::irAlHome();
             }else{
-              header("Location:../my/home.php");
+                Redirect::irAlHome();
             }
     }
