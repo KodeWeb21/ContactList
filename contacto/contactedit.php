@@ -1,13 +1,14 @@
 <?php 
+    require_once("../clases/sesion/sesion.php");
+    Sesion::VerificarSesion();
     if(isset($_GET['id']) && !empty($_GET['id'])){
         $idContacto = $_GET['id'];
-        session_start();
         $_SESSION['id-contacto'] = $idContacto;
     }
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -77,7 +78,7 @@
                     </h3>
                 </div>
             </header>
-            <form action='edit.php' method='POST'>
+            <form action='../acciones/edit.php' method='POST'>
                 <div class='content-info'>
                         <label for='nombre' class='label'>Nombre</label>
                         <input type='text' class='input' name='nombre' id='' value='{$contacto['NOMBRE_CONTACTO'][0]['NOMBRE_CONTACTO']}'>
