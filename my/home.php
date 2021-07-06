@@ -45,7 +45,7 @@
                     <h3 class='nombre'>{$contacto['NOMBRE_CONTACTO'][0]['NOMBRE_CONTACTO']}</h3>
                     <div class='buttons'>
                         <a href='../contacto/contactedit.php?id={$contacto['ID_CONTACTO']}' class='button'>Editar</a>
-                        <a href='../contacto/delete.php?id={$contacto['ID_CONTACTO']}' class='button'>Eliminar</a>
+                        <a href='../acciones/delete.php?id={$contacto['ID_CONTACTO']}' class='button'>Eliminar</a>
                     </div>
                 </div>
             </article>
