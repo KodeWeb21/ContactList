@@ -1,7 +1,8 @@
 <?php 
     session_start();
+    require_once("clases/redirect/redirect.php");
     if(isset($_SESSION['id'])){
-            header("Location:my/home.php");
+            Redirect::irAlHome();
         }
 ?>
 
