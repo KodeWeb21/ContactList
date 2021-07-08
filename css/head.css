@@ -14,11 +14,24 @@ header{
 
 .user{
     margin-right:20px;
+    position:relative;
 }
 
 input[type="search"] {
     width: 80%;
     padding:.5rem;
+}
+
+.logout{
+    position:absolute;
+    left:0;
+    bottom:-80%;
+}
+
+.logout-link{
+    display:block;
+    text-decoration: none;
+    color:inherit;
 }
 
 @media screen and (max-width:1000px){
@@ -29,5 +42,6 @@ input[type="search"] {
         width:60%;
         margin-left:0;
         margin-right:0;
+        flex-grow:1;
     }
 }
