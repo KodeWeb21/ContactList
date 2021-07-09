@@ -6,7 +6,8 @@
         if(isset($_POST['correo']) && isset($_POST['clave'])){
             $correoUsuario = $_POST['correo'];
             $clave = $_POST['clave'];
-            $user = Login::logearUsuario($correoUsuario,$clave);
+            $objLogin = new Login();
+            $user = $objLogin->logearUsuario($correoUsuario,$clave);
             
             if(!$user){
                 echo 'El usuario no existe';
@@ -14,7 +15,8 @@
             }
     
             $idUser = $user[0];
-            Sesion::crearSesion($idUser);
+            $objSesion = new Sesion();
+            $objSesion->crearSesion($idUser);
         }
     }else{
         Redirect::irAlIndex();
