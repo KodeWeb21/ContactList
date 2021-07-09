@@ -32,6 +32,7 @@
             </div>
         </div>
         <input type="submit" value="Iniciar Sesion" class="button is-light  is-link">
+        <a href="singin.php" class="button is-light is-link">Registrarse</a>
     </form>
 </body>
 </html>
