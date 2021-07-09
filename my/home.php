@@ -51,8 +51,8 @@
                 <div class='content-text'>
                     <h3 class='nombre'>{$contacto['NOMBRE_CONTACTO'][0]['NOMBRE_CONTACTO']}</h3>
                     <div class='buttons'>
-                        <a href='../usuario/contactedit.php?id={$contacto['ID_CONTACTO']}' class='button'>Editar</a>
-                        <a href='../usuario/delete.php?id={$contacto['ID_CONTACTO']}' class='button'>Eliminar</a>
+                        <a href='../contacto/contactedit.php?id={$contacto['ID_CONTACTO']}' class='button'>Editar</a>
+                        <a href='../contacto/delete.php?id={$contacto['ID_CONTACTO']}' class='button'>Eliminar</a>
                     </div>
                 </div>
             </article>
@@ -63,7 +63,7 @@
        </section>
     </main>
        <div class="content-add">
-       <a href="../usuario/contact.php" class="addlink">
+       <a href="../contacto/contact.php" class="addlink">
             <button type="submit" class="addbtn">+</button>
             </a>
       </div>
