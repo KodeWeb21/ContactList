@@ -2,7 +2,7 @@
     require_once("../clases/conexion/conexion.php");
 
     class Login{
-        static function logearUsuario($email, $clave){
+        public function logearUsuario($email, $clave){
         $ObjConexion = new ConexionSQLSERVER();
         $smt = $ObjConexion->conectar();
         $sql = "SELECT ID_USUARIO FROM USUARIO WHERE EMAIL_USUARIO='$email' AND CONTRASEÑA='$clave' " ;
