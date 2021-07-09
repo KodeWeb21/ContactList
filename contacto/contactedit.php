@@ -1,6 +1,5 @@
 <?php 
-    require_once("../clases/sesion/sesion.php");
-    Sesion::VerificarSesion();
+    require_once("../clases/sesion/verificar.php");
     if(isset($_GET['id']) && !empty($_GET['id'])){
         $idContacto = $_GET['id'];
         $_SESSION['id-contacto'] = $idContacto;

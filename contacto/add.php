@@ -1,9 +1,8 @@
 <?php 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
       require_once("../clases/usuario/usuario.php");  
-      require_once("../clases/sesion/sesion.php");
+      require_once("../clases/sesion/verificar.php");
       require_once("../clases/redirect/redirect.php");
-      Sesion::VerificarSesion();
       $idUsuario = $_SESSION['id']['ID_USUARIO'];
         if(
             isset($_POST['nombre']) && 

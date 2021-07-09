@@ -1,6 +1,5 @@
 <?php 
-    require_once("../clases/sesion/sesion.php");
-    Sesion::VerificarSesion();
+    require_once("../clases/sesion/verificar.php");
 ?>
 <!DOCTYPE html>
 <html lang="es">

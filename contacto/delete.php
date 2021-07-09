@@ -1,5 +1,6 @@
 <?php 
     require_once("../clases/usuario/usuario.php");
+    require_once("../clases/sesion/verificar.php");
     require_once("../clases/redirect/redirect.php");
     if(isset($_GET['id']) && !empty($_GET['id'])){
         $objUsuario = new Usuario();
