@@ -16,7 +16,7 @@
 <body>
     <header>
         <form class="search" action="search.php" method="GET">
-            <input type="search" class="input" name="q" id="" placeholder="Buscar...">
+            <input type="search" class="input" name="q" id="" placeholder="Buscar..." required>
         </form>
         <div class="user">
             <div class="button">

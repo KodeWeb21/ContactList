@@ -16,22 +16,22 @@
         <div class="field">
             <label for="nombre" class="label">Nombre</label>
             <div class="control">
-                <input type="text" id="nombre" class="input" name="nombre">
+                <input type="text" id="nombre" class="input" name="nombre" required>
             </div>
         </div>
         <div class="field">
             <label for="email" class="label">Email</label>
             <div class="control">
-                <input type="email" class="input" name="email">
+                <input type="email" class="input" name="email" required>
             </div>
         </div>
         <div class="field">
             <label for="telefono" class="label">Telefono</label>
             <div class="control">
-                <input type="tel" class="input" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="809-666-6666">
+                <input type="tel" class="input" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="809-666-6666" required>
             </div>
             <div class="select" style="margin:15px;">
-                <select name="type">
+                <select name="type" required>
                     <option value="casa">Casa</option>
                     <option value="trabajo">Trabajo</option>
                     <option value="personal">Personal</option>

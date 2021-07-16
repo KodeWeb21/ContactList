@@ -20,7 +20,7 @@
 <body>
     <header>
         <form class="search" action="search.php" method="GET">
-            <input type="search" class="input" name="q" id="" placeholder="Buscar...">
+            <input type="search" class="input" name="q" id="" placeholder="Buscar..." required>
         </form>
         <div class="user">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
