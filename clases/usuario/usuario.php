@@ -113,4 +113,15 @@
                       DELETE FROM TELEFONO WHERE ID_CONTACTO = $idContacto";
             $conect->ejecutarQuery($query);
         }
+
+        public function buscarContacto($nombreContacto,$idUsuario){
+            $conect = new ConexionSQLSERVER();
+            $query = "SELECT ID_CONTACTO, NOMBRE_CONTACTO FROM CONTACTO WHERE NOMBRE_CONTACTO LIKE '%$nombreContacto%' AND ID_USUARIO = $idUsuario";
+            $contacto = $conect->ejecutarQuery($query);
+            if($contacto){
+                return $contacto;
+            }else{
+                return NULL;
+            }
+        }
     }
