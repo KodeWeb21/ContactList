@@ -22,13 +22,13 @@
         <div class="field">
             <label for="email" class="label">Email</label>
             <div class="control">
-                <input type="email" id="email" class="input" placeholder="Email" name="correo">
+                <input type="email" id="email" class="input" placeholder="Email" name="correo" required>
             </div>
         </div>
         <div class="field">
             <label for="password" class="label">Contraseña</label>
             <div class="control">
-                <input type="password" class="input" id="password" placeholder="Contraseña" name="clave">
+                <input type="password" class="input" id="password" placeholder="Contraseña" name="clave" required>
             </div>
         </div>
         <input type="submit" value="Iniciar Sesion" class="button is-light  is-link">
