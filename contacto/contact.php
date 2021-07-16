@@ -28,7 +28,7 @@
         <div class="field">
             <label for="telefono" class="label">Telefono</label>
             <div class="control">
-                <input type="tel" class="input" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                <input type="tel" class="input" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="809-666-6666">
             </div>
             <div class="select" style="margin:15px;">
                 <select name="type">
