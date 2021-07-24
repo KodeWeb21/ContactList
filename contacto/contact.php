@@ -40,7 +40,7 @@
         </div>
         <div class="buttons">
             <input type="submit" name="crear" value="Crear Contacto" class="button is-light">
-            <input type="submit" value="Cancelar" class="button is-light">
+            <a href="../my/home.php"class="button is-light">Cancelar</a>
         </div>
     </form>
 </body>

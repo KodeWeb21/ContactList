@@ -92,7 +92,7 @@
                 </div>
                 <div class='buttons'>
                     <input type='submit' class='button' value='Confirmar cambios' name='editar'>
-                    <input type='submit'  class='button' value='Cancelar' name='cancelar'>
+                    <a href='../my/home.php' class='button'>Cancelar</a>
                 </div>
             </form>
                         "
